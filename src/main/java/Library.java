@@ -19,4 +19,11 @@ public class Library {
             books.add(book);
         }
     }
+
+    public void loanBook(Book book, Borrower borrower) {
+        if (this.books.contains(book)){
+            this.books.remove(book);
+            borrower.addBook(book);
+        }
+    }
 }

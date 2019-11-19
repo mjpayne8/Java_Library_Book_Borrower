@@ -15,4 +15,11 @@ public class Borrower {
     public void addBook(Book book) {
         this.collection.add(book);
     }
+
+    public void returnBook(Book book, Library library) {
+        if (this.collection.contains(book)){
+            this.collection.remove(book);
+            library.addBook(book);
+        }
+    }
 }
