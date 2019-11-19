@@ -26,4 +26,14 @@ public class Library {
             borrower.addBook(book);
         }
     }
+
+    public int bookByGenre(String genre) {
+        int count = 0;
+        for (Book book: this.books){
+            if (book.getGenre() == genre){
+                count += 1;
+            }
+        }
+        return count;
+    }
 }

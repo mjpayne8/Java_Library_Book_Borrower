@@ -48,4 +48,10 @@ public class LibraryTest {
         assertEquals(0, library.countBooks());
         assertEquals(0, borrower.countBooks());
     }
+
+    @Test
+    public void countBookByGenre(){
+        library.addBook(book);
+        assertEquals(1, library.bookByGenre("Fantasy"));
+    }
 }
