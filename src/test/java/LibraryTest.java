@@ -41,4 +41,11 @@ public class LibraryTest {
         assertEquals(0, library.countBooks());
         assertEquals(1, borrower.countBooks());
     }
+
+    @Test
+    public void doesNotHaveBookToLend(){
+        library.loanBook(book, borrower);
+        assertEquals(0, library.countBooks());
+        assertEquals(0, borrower.countBooks());
+    }
 }

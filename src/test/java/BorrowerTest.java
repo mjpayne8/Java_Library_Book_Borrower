@@ -35,4 +35,11 @@ public class BorrowerTest {
         assertEquals(1, library.countBooks());
     }
 
+    @Test
+    public void doesNotHaveBookToReturn(){
+        borrower.returnBook(book, library);
+        assertEquals(0, borrower.countBooks());
+        assertEquals(0, library.countBooks());
+    }
+
 }
